@@ -1,0 +1,265 @@
+% ============================================================
+% Malindu Bandara - Zebra Software Engineering Internship CV
+% One-page, single-column, ATS-friendly
+% ============================================================
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,top=0.42in,bottom=0.42in,left=0.58in,right=0.58in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% ---------- Section style ----------
+\titleformat{\section}
+{\large\bfseries}
+{}{0em}{}
+[\vspace{-5pt}\rule{\textwidth}{0.45pt}]
+
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ---------- Compact bullets ----------
+\setlist[itemize]{
+    leftmargin=1.25em,
+    label=\textbullet,
+    itemsep=0.5pt,
+    topsep=1pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% ---------- Helpers ----------
+\newcommand{\cvlink}[2]{\href{#1}{\uline{#2}}}
+
+\newcommand{\linksep}{
+    \hspace{0.35em}{\small\textbullet}\hspace{0.35em}
+}
+
+\newcommand{\entry}[4]{
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} & \textit{#2} \\
+    \textit{#3} & #4
+\end{tabularx}
+}
+
+\newcommand{\project}[3]{
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{#1} & {\small #3} \\[-0.5pt]
+    {\small\textit{#2}} & {}
+\end{tabularx}
+\vspace{-1pt}
+}
+
+\begin{document}
+
+% ============================================================
+% HEADER
+% ============================================================
+
+\begin{center}
+{\LARGE \textbf{Malindu Bandara}}\\[1pt]
+
+\small
+\cvlink{mailto:malindub.23@cse.mrt.ac.lk}
+{malindub.23@cse.mrt.ac.lk}
+\linksep
++94 75 776 8268
+\linksep
+\cvlink{https://www.linkedin.com/in/thisismalindu/}{LinkedIn}
+\linksep
+\cvlink{https://github.com/thisismalindu}{GitHub}
+\linksep
+\cvlink{https://thisismalindu.com}{Website}
+\end{center}
+
+\vspace{-4pt}
+
+% ============================================================
+% EDUCATION
+% ============================================================
+
+\section{Education}
+
+\entry
+{University of Moratuwa}
+{2023 -- Present}
+{BSc Engineering Honours in Computer Science \& Engineering}
+{GPA: \textbf{3.43/4.00}}
+
+% ============================================================
+% EXPERIENCE & INITIATIVES
+% ============================================================
+
+\section{Experience \& Initiatives}
+
+\entry
+{Sciber | Creator \& Technical Educator}
+{2020 -- Present}
+{\cvlink{https://youtube.com/@wearesciber}{youtube.com/@wearesciber}}
+
+\begin{itemize}
+\item Founded and independently operated a programming-education channel
+focused on C++ and GUI development, reaching \textbf{16K+ subscribers},
+approximately \textbf{2.3M views}, and \textbf{99 videos}.
+\end{itemize}
+
+\vspace{1pt}
+
+\entry
+{Freelance Graphic Designer}
+{}
+{Independent}
+{}
+
+\begin{itemize}
+\item Delivered graphic-design work for clients, communicating requirements,
+handling revisions, and producing final visual assets to agreed specifications.
+\end{itemize}
+
+% ============================================================
+% TECHNICAL SKILLS
+% ============================================================
+
+\section{Technical Skills}
+
+{\small
+\textbf{Languages:}
+C++, C\#, JavaScript, TypeScript, Python, SQL
+\\[1.5pt]
+\textbf{Frameworks \& Platforms:}
+.NET, WPF, Windows Forms, Node.js, NestJS, Next.js, React, PostgreSQL
+\\[1.5pt]
+\textbf{Tools \& Systems:}
+Linux, Git, Visual Studio, Docker, Docker Compose, GitHub Actions
+\\[1.5pt]
+\textbf{Concepts:}
+Object-Oriented Programming, debugging, automated testing, REST APIs, CI/CD, Agile/Scrum
+}
+
+% ============================================================
+% PROJECTS
+% ============================================================
+
+\section{Selected Projects}
+
+% ------------------------------------------------------------
+
+\project
+{C++ Windows Forms Project Template}
+{C++/CLI · Visual Studio · Windows Forms}
+{
+\cvlink
+{https://marketplace.visualstudio.com/items?itemName=Sciber.cppwinformsproject}
+{Marketplace}
+\linksep
+\cvlink
+{https://github.com/thisismalindu/CppWinFormsProjectTemplate}
+{GitHub}
+}
+
+\begin{itemize}
+\item Created and published a Visual Studio developer tool that simplifies
+starting C++ Windows Forms applications; reached \textbf{36K+ installations}
+through the Visual Studio Marketplace.
+\end{itemize}
+
+\vspace{1pt}
+
+% ------------------------------------------------------------
+
+\project
+{SymbolPicker | Unicode Search Utility}
+{C\# · .NET · Windows Forms}
+{\cvlink{https://github.com/thisismalindu/SymbolPicker}{GitHub}}
+
+\begin{itemize}
+\item Built a desktop utility that parses Unicode symbol-description data,
+supports text-based symbol search, and copies selected symbols directly to
+the clipboard.
+\end{itemize}
+
+\vspace{1pt}
+
+% ------------------------------------------------------------
+
+\project
+{Personal Technical Publishing Site}
+{JavaScript · Markdown · HTML/CSS · Vercel}
+{
+\cvlink{https://thisismalindu.com}{Website}
+\linksep
+\cvlink{https://github.com/thisismalindu/my-website-blog}{GitHub}
+}
+
+\begin{itemize}
+\item Built a lightweight publishing pipeline that reads Markdown files,
+extracts article metadata, and generates complete HTML pages using reusable
+templates, separating content from presentation without a traditional CMS.
+\end{itemize}
+
+\vspace{1pt}
+
+% ------------------------------------------------------------
+
+\project
+{timActionCenter | Custom Windows Action Center}
+{C\# · .NET 6 · WPF · Windows Registry}
+{\cvlink{https://github.com/thisismalindu/timActionCenter}{GitHub}}
+
+\begin{itemize}
+\item Built a Windows system-tray utility for controlling system settings such
+as proxy configuration and light/dark themes, integrating application logic
+with the Windows Registry and native system behavior.
+\end{itemize}
+
+\vspace{1pt}
+
+% ------------------------------------------------------------
+
+\project
+{ResourceHive | Multi-Tenant Resource Sharing Platform}
+{Next.js · NestJS · TypeScript · PostgreSQL · Docker · Nginx · GitHub Actions}
+{\cvlink{https://github.com/resourcehive-team/resourcehive}{GitHub}}
+
+\begin{itemize}
+\item Contributed to a semester-long team project built around a microservices
+architecture, implementing application features, service integration,
+automated tests, database validation, and CI checks for builds and containers.
+\end{itemize}
+
+% ============================================================
+% PRINT LINKS
+% ============================================================
+
+\vfill
+
+\begin{center}
+\scriptsize
+\textit{Links for print:}
+\href{https://www.linkedin.com/in/thisismalindu/}
+{linkedin.com/in/thisismalindu}
+\hspace{0.7em}\textbullet\hspace{0.7em}
+\href{https://github.com/thisismalindu}
+{github.com/thisismalindu}
+\end{center}
+
+\end{document}
